@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Node.js Course</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs')%>
+        <h1>Contacts:</h1>
+        <!-- <% const name='Kan' %>
+            <ul>
+                <li><a href="http://youtube.com/YauhenKavalchuk">YouTube</a></li>
+                <li><a href="http://github.com/YauhenKavalchuk">Twitter</a></li>
+                <li><a href="http://twitter.com/YauhenKavalchuk">GitHub</a></li>
+                <li>
+                    <%= name %>
+                </li>
+            </ul> -->
+
+        <% if (contacts.length) { %>
+            <% contacts.forEach(({ link, name })=> { %>
+                <li>
+                    <a href="<%= link %>">
+                        <%= name %>
+                    </a>
+                </li>
+                <% }) %>
+                    <% } %>
+</body>
+
+</html>
